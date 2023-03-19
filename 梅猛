@@ -1,0 +1,16 @@
+1.k8s有几个组件
+解答: apiserver 、controller-manager 、kubeproxy、kubelet、etcd、scheduler
+2.写下创建pod的yaml
+解答: 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+3.说下select有什么作用
+解答: select用来选择绑定标签，是K8s做调度，亲和性，以及污点，匹配Pod关联pod，并选择得标志性作用
